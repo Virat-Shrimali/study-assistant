@@ -1,0 +1,118 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .quiz-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #000, #1a1a1a); /* Dark background */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px; /* Padding for smaller screens */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+  
+  .futuristic-heading {
+    font-size: 2rem; /* Adjusted for better responsiveness */
+    color: #00c6ff; /* Light blue color */
+    text-shadow: 0 0 8px rgba(0, 198, 255, 0.8), 0 0 16px rgba(0, 198, 255, 0.5);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .futuristic-subtext {
+    font-size: 1rem; /* Adjusted for better responsiveness */
+    color: #c1c1c1; /* Lighter gray text */
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .file-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input[type="file"] {
+    padding: 8px;
+    border-radius: 20px; /* Rounded edges */
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border: 2px dashed #00c6ff; /* Light blue border */
+    color: #00c6ff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="file"]:hover {
+    background-color: rgba(0, 198, 255, 0.1); /* Hover effect */
+  }
+  
+  .upload-button {
+    padding: 10px 15px; /* Adjusted padding */
+    background: #00c6ff;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    font-size: 1rem; /* Adjusted for better responsiveness */
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #0072ff;
+    box-shadow: 0 0 8px rgba(0, 198, 255, 0.8), 0 0 16px rgba(0, 198, 255, 0.6);
+  }
+  
+  .quiz-output-container {
+    margin-top: 10px; /* Adjusted margin */
+    padding: 10px; /* Adjusted padding */
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent background */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculations */
+    color: #fff;
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .futuristic-heading {
+      font-size: 1.5rem; /* Smaller heading size */
+    }
+  
+    .futuristic-subtext {
+      font-size: 0.9rem; /* Smaller subtext size */
+    }
+  
+    .upload-button {
+      padding: 8px 12px; /* Smaller button padding */
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  
+    .quiz-output-container {
+      padding: 8px; /* Smaller padding */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .file-upload-container {
+      gap: 8px;
+    }
+  
+    .upload-button {
+      width: 100%; /* Full width button */
+    }
+  }
+  

@@ -1,0 +1,114 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed; /* Navbar stays at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Navbar spans the full width */
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly lighter black background */
+  padding: 10px 0; /* Reduced padding to make navbar shorter */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex; /* Ensure navbar is a flex container */
+  justify-content: center; /* Center contents horizontally */
+}
+
+/* Container for Navbar items */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Full width container */
+  max-width: 1200px; /* Optional: maximum width for the container */
+  padding: 0 20px; /* Padding for container */
+}
+
+/* Logo */
+.navbar-logo .navbar-brand {
+  font-size: 1.4rem; /* Adjust font size */
+  font-weight: bold;
+  color: #00c6ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo .navbar-brand:hover {
+  color: #0072ff;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Ensure items are in a row */
+  gap: 15px; /* Space between items */
+  align-items: center;
+  flex-wrap: nowrap; /* Ensure items do not wrap */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Transition for smooth opening/closing */
+  max-height: none; /* Show menu items by default */
+  opacity: 1; /* Show menu items */
+}
+
+/* Navbar Items */
+.navbar-item {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* Navbar Links */
+.navbar-link {
+  color: #fff;
+  font-size: 0.9rem; /* Adjust font size */
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 8px 12px; /* Adjust padding */
+  border-radius: 30px; /* Rounded buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover {
+  background-color: #00c6ff; /* Light blue background on hover */
+  color: #000; /* Change text color to black on hover */
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.8), 0 0 20px rgba(0, 198, 255, 0.6);
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+  display: none; /* Hidden by default */
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it is above other elements */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0 10px; /* Adjust container padding for smaller screens */
+  }
+
+  .navbar-menu {
+    display: flex; /* Show menu items in mobile view */
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 10px; /* Adjust gap for vertical alignment */
+    max-height: 0; /* Hide menu items by default */
+    overflow: hidden; /* Hide overflowing content */
+    opacity: 0; /* Initially hidden */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Transition for smooth opening/closing */
+  }
+
+  .navbar-menu.active {
+    max-height: 300px; /* Adjust based on the expected maximum height of your menu */
+    opacity: 1; /* Show menu items */
+  }
+
+  .navbar-toggle {
+    display: block; /* Show the toggle button */
+  }
+}

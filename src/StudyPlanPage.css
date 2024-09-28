@@ -1,0 +1,198 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1d1f27;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Container for the page */
+.study-plan-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 198, 255, 0.15);
+}
+
+/* Header Styling */
+.study-plan-container h1 {
+  font-size: 2.5rem;
+  color: #00c6ff;
+  text-shadow: 0 0 15px rgba(0, 198, 255, 0.5);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+input[type="number"], input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px 0;
+  border-radius: 50px;
+  border: 2px solid #00c6ff;
+  background-color: #282c34;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+  border-color: #0072ff;
+}
+
+button[type="submit"] {
+  background-color: #00c6ff;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0072ff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6), 0 0 25px rgba(0, 198, 255, 0.4);
+}
+
+/* Download Button Styling */
+button.download-btn {
+  background-color: #00c6ff;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.download-btn:hover {
+  background-color: #0072ff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6), 0 0 25px rgba(0, 198, 255, 0.4);
+}
+
+/* Study Plan Output Styling */
+.study-plan-container .plan-output {
+  background-color: #282c34;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 198, 255, 0.3);
+  position: relative;
+  max-width: 100%;
+  max-height: 80vh; /* Set max height for readability */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Close Button Styling */
+button.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* Study Plan List Styling */
+.study-plan-container h2 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  color: #00c6ff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #1d1f27;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #00c6ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 198, 255, 0.2);
+}
+
+/* Transition Styles */
+.plan-transition-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.plan-transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+.plan-transition-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.plan-transition-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  input[type="number"], input[type="text"] {
+    width: 90%;
+  }
+
+  button[type="submit"], button.download-btn {
+    width: 90%;
+  }
+
+  .study-plan-container h1 {
+    font-size: 2rem;
+  }
+
+  .study-plan-container h2 {
+    font-size: 1.6rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+}
