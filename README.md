@@ -13,7 +13,7 @@ The **AI-Powered Study Assistant** is a web application designed to enhance the 
 
 - **Frontend**: Built with React to create a dynamic and responsive user interface.
 - **Backend**: Utilizes Node.js for server-side operations and API interactions.
-- **APIs**: Integrates the OpenAI API and Hugging Face API for advanced language processing and study material analysis.
+- **APIs**: Integrates the Hugging Face API for advanced language processing and study material analysis.
 
 ## Current Status
 
